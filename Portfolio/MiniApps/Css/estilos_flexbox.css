@@ -1,0 +1,54 @@
+body{
+    background: beige;
+}
+
+
+.caja{
+    border: 1px solid rgb(70,69,69);
+    background-color: white;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    width: 200px;
+    line-height: 200px;
+    text-align: center;
+    margin: 5px;
+}
+
+
+.flex-container{
+    border: 1px solid black;
+    background: #ccc;
+    padding: 10px;
+    width: 70%;
+    height: 600px;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-flow: row wrap;
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap;*/
+    
+}
+
+.c1{
+    background: lightblue;
+    order: 3;
+    flex-basis: 40%;
+    flex-grow: 1;
+}
+
+.c2{
+    background: lightcoral;
+    order: 2;
+    flex-basis: 30%;
+    flex-grow: 1; /* Hace lo mismo que flex-basis*/
+}
+
+.c3{
+    background: lightgreen;
+    order: 1;
+    flex-grow: 1;
+    flex-basis: 10%;
+}
