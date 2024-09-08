@@ -1,6 +1,6 @@
 const listaPokemon = document.querySelector("#listaPokemon");
 const botonesHeader = document.querySelectorAll(".btn-header")
-let URL = "http://pokeapi.co/api/v2/pokemon/";
+let URL = "https://pokeapi.co/api/v2/pokemon/";
 
 for(let i = 1; i <= 151; i++){
     fetch(URL + i)
