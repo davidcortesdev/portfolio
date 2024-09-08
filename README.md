@@ -15,5 +15,5 @@ Pronto empezaré a añadir contenido con React.
 ## Instalación 🪛
 Este proyecto no necesita de instalación. Simplemente abre la carpeta o haz doble click en el html.
 
-##Contratación ✍🏼
+## Contratación ✍🏼
 Si quieres contratarme, puedes escribirme a davidcortes.dev@gamil.com para consultas.
