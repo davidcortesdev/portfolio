@@ -6,10 +6,15 @@
 
 html{
     font-family: 'Montserrat', 'sans-serif';
+
 }
 
 body{
-    background: rgba(176, 176, 176, 0.458);
+    background-image: url(MiniApps/Imagenes/fondo-porfolio1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 header{
@@ -25,6 +30,7 @@ main{
 
 nav{
     padding: 10px;
+    padding-inline: 40px;
     line-height: 110px;
 }
 
@@ -37,6 +43,7 @@ nav{
 
 .nav .logo img{
     height: 100%;
+    width: 100%;
     vertical-align: top;
 }
 
