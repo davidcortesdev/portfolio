@@ -1,68 +1,60 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html{
+html {
     font-family: 'Montserrat', 'sans-serif';
-
 }
 
-body{
+body {
     background-image: url(MiniApps/Imagenes/fondo-porfolio1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
-header{
+header {
     background: rgb(48, 60, 73);
 }
 
-main{
-    padding: 2rem;
+main {
+    padding: 4rem;
     max-width: 1400px;
     margin: 0 auto;
 }
 
-
-nav{
+nav {
     padding: 10px;
     padding-inline: 40px;
     line-height: 110px;
 }
 
-
-
-.nav .logo{
+.nav .logo {
     height: 100px;
 }
 
-
-.nav .logo img{
+.nav .logo img {
     height: 100%;
     width: 100%;
     vertical-align: top;
 }
 
-
-.contenedor{
+.contenedor {
     width: 100%;
     display: flex;
     flex-flow: nowrap;
     justify-content: space-between;
 }
 
-
-.enlaces-header{
+.enlaces-header {
     width: 79%;
     text-align: right;
     margin-right: 15px;
 }
 
-.enlaces-header a{
+.enlaces-header a {
     text-decoration: none;
     color: rgb(255, 255, 255);
     margin-right: 2px;
@@ -70,8 +62,7 @@ nav{
     padding-right: 4px;
 }
 
-
-.enlaces-header a:hover{
+.enlaces-header a:hover {
     text-decoration: none;
     color: rgb(221, 173, 52, 0.913);
     margin-right: 2px;
@@ -79,96 +70,162 @@ nav{
     padding-right: 4px;
 }
 
-
-
-
-
 /* Contenido principal */
-
-.principal{
+.principal {
     height: 690px;
     background: rgba(221, 173, 52, 0.913);
-    
 }
 
-
-.introduccion{
+.introduccion {
     padding: 20px;
     text-align: center;
     align-content: center;
-    
 }
 
-
-.introduccion h1{
+.introduccion h1 {
     margin-bottom: 20px;
     font-weight: 800;
 }
 
-
-.introduccion p{
+.introduccion p {
     width: 60%;
     margin: 0 auto;
     color: white;
     font-weight: 200;
 }
 
-
-
 /* Postal */
-
-.contenedor-main{
+.contenedor-main {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.postal {
+    display: flex;
     justify-content: center;
-    align-items: center;
-    align-content: center;
-    padding-block: 5rem;
 }
 
-
-.postal img{
-    height: 600px;
+.postal img {
+    height: 300px;
     width: 100%;
+    border-block: 2px solid rgba(0, 0, 0, 0.163);
 }
 
-
-.contenido-postal{
+.contenido-postal {
     background: white;
-    width: 90%;
+    width: 100%;
     border-radius: 3%;
     box-shadow: 0px 8px 30px rgba(127, 127, 127, 0.559);
-
 }
 
-
-.contenido-postal:hover{
+.contenido-postal:hover {
     box-shadow: 0px 8px 30px rgba(39, 53, 67, 0.559);
 }
 
-
-
-.contenido-postal h1{
+.contenido-postal h1 {
     padding-top: 1rem;
     padding-inline: 2rem;
-    
 }
 
-
-.contenido-postal p{
+.contenido-postal p {
     padding-inline: 2rem;
     padding-bottom: 1rem;
-
-    
 }
 
-
-.descripcion-postal{
+.descripcion-postal {
     padding: 1rem;
     text-align: start;
     align-content: center;
 }
 
+.tarjeta1, .tarjeta2, .tarjeta3, .tarjeta4 {
+    color: inherit;
+    text-decoration: none;
+}
 
+.nombre {
+    color: white;
+    font-size: 1.5rem;
+}
 
+.subnombre {
+    color: rgba(221, 173, 52, 0.913);
+}
 
+/* Media Queries */
+
+@media screen and (max-width: 1200px) {
+    main {
+        padding: 3rem;
+    }
+
+    .enlaces-header {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor-main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .enlaces-header {
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .nav .logo {
+        height: 80px;
+    }
+
+    .nav .logo img {
+        height: 100%;
+    }
+
+    .introduccion p {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .introduccion p {
+        width: 90%;
+    }
+
+    .contenedor-main {
+        grid-template-columns: 1fr;
+    }
+
+    .postal img {
+        height: auto; /* Ajusta el tamaño de la imagen según el contenido */
+    }
+
+    .contenido-postal h1, .contenido-postal p {
+        padding-inline: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nombre {
+        font-size: 1.2rem;
+    }
+
+    .enlaces-header a {
+        display: block;
+        margin: 0;
+        border-right: none;
+        padding-right: 0;
+        padding-bottom: 5px;
+    }
+
+    header {
+        text-align: center;
+    }
+}

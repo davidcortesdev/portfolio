@@ -1,21 +1,19 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto'
-                                ,'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
-
-.contenido-nav{
+.contenido-nav {
     height: 4rem;
     display: flex;
     justify-content: space-between;
-    padding: 0 27px 0 27px;
+    padding: 0 27px;
     align-items: center;
 }
 
-.enlaces{
+.enlaces {
     display: flex;
     margin-left: auto;
     font-weight: 700;
@@ -24,89 +22,148 @@
     gap: 30px;
 }
 
-.contenido-svg{
+.contenido-svg {
     width: 50px;
     height: 50px;
     color: black;
 }
 
-.contenido-nav button{
+.contenido-nav button {
     background: white;
     width: 8rem;
     border: 1px solid rgb(255, 152, 0);
     text-transform: uppercase;
-    padding-inline: 6px;
-    padding-block: 10px;
+    padding: 6px 0;
     border-radius: 0.5vmax;
     font-weight: 650;
 }
 
-.contenido-nav button:hover{
+.contenido-nav button:hover {
     background: rgb(255, 152, 0);
     color: white;
 }
 
-
-
-main{
+main {
     background: rgb(39, 43, 51);
     color: white;
-
 }
 
-.contenedor-letrero{
+.contenedor-letrero {
     height: 33rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.contenedor-letrero h1{
+.contenedor-letrero h1 {
     color: rgb(39, 43, 51);
     font-size: 6rem;
     font-weight: 800;
     text-align: center;
 }
 
-.contenedor-personajes{
-
+.contenedor-personajes {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+    gap: 20px;
     padding: 20px;
-    align-items: center;
-    justify-items: center;
 }
 
-.tarjeta-personaje{
+.tarjeta-personaje {
     display: flex;
-    margin-block: 20px;
-    align-items: center;
-    align-content: center;
-    justify-items: center;
+    flex-direction: row; /* Imagen y información en horizontal */
+    align-items: stretch; /* Alinea la tarjeta completa verticalmente */
+    background: rgba(107, 107, 107, 0.289); /* Color original de fondo */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden; /* Evita el desbordamiento */
 }
 
-
-.imagen-personaje{
+.imagen-personaje {
     width: 229.2px;
     height: 220px;
     background: white;
     border-radius: 10px 0 0 10px;
+    object-fit: cover; /* Mantiene la proporción de la imagen */
 }
 
-.informacion-personaje{
+.informacion-personaje {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 370.8px;
     height: 220px;
     padding: 13.5px;
-    background: rgba(107, 107, 107, 0.289);
+    background: rgba(107, 107, 107, 0.289); /* Color original de fondo */
     border-radius: 0 10px 10px 0;
 }
 
-
-.titulo{
+.titulo {
     color: gray;
     font-weight: 500;
 }
 
+/* Media Queries */
+
+@media screen and (max-width: 1200px) {
+    .contenedor-letrero h1 {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .enlaces {
+        font-size: 16px;
+        gap: 20px;
+    }
+
+    .contenedor-letrero h1 {
+        font-size: 3rem;
+    }
+
+    .contenedor-personajes {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas medianas */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contenedor-letrero h1 {
+        font-size: 2.5rem;
+    }
+
+    .contenedor-personajes {
+        grid-template-columns: 1fr; /* Una columna en pantallas más pequeñas */
+    }
+
+    .tarjeta-personaje {
+        flex-direction: column; /* Cambia la dirección de flexión a columna en pantallas pequeñas */
+    }
+
+    .imagen-personaje {
+        width: 100%; /* Asegura que la imagen ocupe todo el ancho en pantallas pequeñas */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    .informacion-personaje {
+        width: 100%; /* Asegura que la información ocupe todo el ancho en pantallas pequeñas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contenido-nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .enlaces {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    .contenedor-letrero h1 {
+        font-size: 2rem;
+    }
+}
