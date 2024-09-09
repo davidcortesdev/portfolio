@@ -217,6 +217,10 @@ nav {
         font-size: 1.2rem;
     }
 
+    .contenedor-main {
+        grid-template-columns: 1fr;
+    }
+
     .enlaces-header a {
         display: block;
         margin: 0;
@@ -229,3 +233,5 @@ nav {
         text-align: center;
     }
 }
+
+
